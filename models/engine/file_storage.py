@@ -38,10 +38,10 @@ class FileStorage:
         from models.review import Review
 
         classes = {
-                'BaseModel': BaseModel, 'User': User, 'Place': Place,
-                'State': State, 'City': City, 'Amenity': Amenity,
-                'Review': Review
-                }
+            'BaseModel': BaseModel, 'User': User, 'Place': Place,
+            'State': State, 'City': City, 'Amenity': Amenity,
+            'Review': Review
+        }
         try:
             temp = {}
             with open(FileStorage.__file_path, 'r') as f:
@@ -50,9 +50,9 @@ class FileStorage:
                     self.all()[key] = classes[val['__class__']](**val)
         except FileNotFoundError:
             pass
-
+        
     def delete(self, obj=None):
-        """delete obj from __objects if it’s inside
+        """delete obj from __objects if its inside
         if obj is equal to None, the method should not do anything"""
         if obj is None:
             return
