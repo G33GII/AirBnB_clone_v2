@@ -3,7 +3,7 @@
 Fabric script to deploy an archive to web servers.
 """
 
-import os
+
 from fabric.api import *
 from fabric.operations import put
 
@@ -22,9 +22,11 @@ def do_deploy(archive_path):
     release_name = os.path.splitext(archive_name)[0]
 
     # Define the hosts
-    env.hosts = ['35.174.200.187', '54.237.102.217']
-
-    
+    env.hosts = ['alias wed1="35.174.200.187', '<IP web-02>']
+    # Use the username and SSH key passed via the command line
+    env.user = 'ubuntu'  # This is set by the -u option in the command
+    # This is set by the -i option in the command
+    env.key_filename = 'my_ssh_private_key'
 
     # Upload the archive to the /tmp/ directory on each web server
     put(archive_path, '/tmp/')
