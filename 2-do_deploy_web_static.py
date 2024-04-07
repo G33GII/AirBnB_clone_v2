@@ -3,6 +3,7 @@
 Fabric script to deploy an archive to web servers.
 """
 
+import os.path
 from fabric.api import *
 from fabric.operations import put
 
@@ -16,7 +17,7 @@ def do_deploy(archive_path):
         print(f"The file at {archive_path} does not exist.")
         return False
 
-    # Extract the archive name without extension
+    """ # Extract the archive name without extension
     archive_name = os.path.basename(archive_path)
     release_name = os.path.splitext(archive_name)[0]
 
@@ -42,12 +43,4 @@ def do_deploy(archive_path):
     run('ln -s /data/web_static/releases/{} /data/web_static/current'.format(release_name))
 
     return True
-
-
-# Example usage
-if __name__ == "__main__":
-    archive_path = 'path/to/your/archive.tgz'
-    if do_deploy(archive_path):
-        print("Deployment successful.")
-    else:
-        print("Deployment failed.")
+    """
