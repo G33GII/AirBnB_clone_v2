@@ -22,7 +22,7 @@ def do_deploy(archive_path):
     env_hosts = ['35.174.200.187', '54.237.102.217']
 
     # Extract the archive name without extension
-    archive_name = os.path.splitext(os.path.basename(archive_path))
+    archive_name = os.path.splitext(os.path.basename(archive_path))[0]
     print(archive_name)
 
     """
