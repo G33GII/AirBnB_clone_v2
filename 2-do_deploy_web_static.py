@@ -24,6 +24,7 @@ def do_deploy(archive_path):
     # Extract the archive name without extension
     archive_name = os.path.splitext(os.path.basename(archive_path))[0]
 
+    """
     # Define the destination folder
     destination_folder = f'/data/web_static/releases/{archive_name}'
 
@@ -65,3 +66,4 @@ def do_deploy(archive_path):
             ssh.close()
 
     return True
+    """
