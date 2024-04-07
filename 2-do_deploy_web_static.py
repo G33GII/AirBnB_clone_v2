@@ -27,6 +27,7 @@ def do_deploy(archive_path):
 
     # Define the destination folder
     destination_folder = f'/data/web_static/releases/{archive_name}'
+    print(destination_folder)
 
     """
     # SSH client setup
