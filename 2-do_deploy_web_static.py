@@ -3,7 +3,7 @@
 Fabric script to deploy an archive to web servers.
 """
 
-
+import os
 from fabric.api import *
 from fabric.operations import put
 
