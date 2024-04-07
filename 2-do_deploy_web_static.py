@@ -12,7 +12,7 @@ import os
 def do_deploy(archive_path):
     """
     Fabric method that distributes an archive to two web servers,
-    using the function do_deploy
+    using the function do_deploy.
     """
     # Check if the file exists
     if not os.path.isfile(archive_path):
