@@ -23,6 +23,7 @@ def do_deploy(archive_path):
 
     # Extract the archive name without extension
     archive_name = os.path.splitext(os.path.basename(archive_path))[0]
+    print(archive_name)
 
     """
     # Define the destination folder
