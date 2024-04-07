@@ -27,9 +27,7 @@ def do_deploy(archive_path):
 
     # Define the destination folder
     destination_folder = f'/data/web_static/releases/{archive_name}'
-    print(destination_folder)
 
-    """
     # SSH client setup
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -68,4 +66,5 @@ def do_deploy(archive_path):
             ssh.close()
 
     return True
+    """
     """
