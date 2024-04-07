@@ -21,15 +21,14 @@ def do_deploy(archive_path):
     # Define your web servers
     env_hosts = ['35.174.200.187', '54.237.102.217']
 
-    # Extract the archive name without extension
+    # Extract the archive name without extension ('web_static_20240407164534', '.tgz')
     archive_name = os.path.splitext(os.path.basename(archive_path))[0]
-    print(archive_name)
-    print(archive_path)
 
-    """
+
     # Define the destination folder
     destination_folder = f'/data/web_static/releases/{archive_name}'
 
+    """
     # SSH client setup
     ssh = paramiko.SSHClient()
     ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
