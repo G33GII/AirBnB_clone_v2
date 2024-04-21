@@ -2,7 +2,6 @@
 """ State Module for HBNB project """
 
 import models
-from models.city import city
 from os import getenv
 from models.base_model import BaseModel, Base
 from sqlalchemy import Column, String
@@ -20,7 +19,7 @@ class State(BaseModel, Base):
         def cities(self):
             """File_storage getter attribute for relationship between state & city"""
             city_objs = []
-            for ct in models.storage.all(City).values():
+            for ct in models.storage.all("City").values():
                 if ct.state_id == self.id:
                     city_objs.append(ct)
             return city_objs
