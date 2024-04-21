@@ -57,4 +57,4 @@ class DBStorage:
     def close(self):
         """Call remove() on the session attribute
         """
-        self.__session.remove()
+        self.__session.close()
