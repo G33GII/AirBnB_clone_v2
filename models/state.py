@@ -21,7 +21,8 @@ class State(BaseModel, Base):
     else:
         @property
         def cities(self):
-            """Getter attribute to return list of City instances associated with the state."""
+            """Getter attribute to return list of City
+            instances associated with the state."""
             city_list = []
             for city in models.storage.all("City").values():
                 if city.state_id == self.id:
