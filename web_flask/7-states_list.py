@@ -3,6 +3,7 @@
 Main module for Flask web application.
 """
 
+
 # Importing necessary modules and classes
 from models import *
 from models import storage
@@ -21,6 +22,7 @@ def states_list():
     states = sorted(list(storage.all("State").values()), key=lambda x: x.name)
     # Render the HTML template '7-states_list.html' with the states data
     return render_template('7-states_list.html', states=states)
+
 
 # Function to close the storage when the application context is torn down
 
