@@ -30,7 +30,9 @@ def c(text):
     text = text.replace('_', ' ')
     return 'C ' + text
 
-# Define a route that displays "Python " followed by the value of the text variable
+
+""" Define a route that displays 'Python '
+        followed by the value of the text variable"""
 
 
 @app.route('/python/<text>', strict_slashes=False)
