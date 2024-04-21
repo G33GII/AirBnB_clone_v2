@@ -30,7 +30,9 @@ def c(text):
     text = text.replace('_', ' ')
     return 'C ' + text
 
-# Define a route that displays "Python " followed by the value of the text variable
+
+""" Define a route that displays 'Python '
+        followed by the value of the text variable"""
 
 
 @app.route('/python/<text>', strict_slashes=False)
@@ -55,7 +57,9 @@ def number_template(n):
     # Render the HTML template with the value of n
     return render_template('number_template.html', number=n)
 
-# Define a route that displays an HTML page with the number n and its odd/even status
+
+"""Define a route that displays an HTML page
+        with the number n and its odd/even status"""
 
 
 @app.route('/number_odd_or_even/<int:n>', strict_slashes=False)
@@ -63,7 +67,8 @@ def number_odd_or_even(n):
     # Determine if the number is odd or even
     odd_or_even = 'even' if n % 2 == 0 else 'odd'
     # Render the HTML template with the value of n and its odd/even status
-    return render_template('6-number_odd_or_even.html', number=n, odd_or_even=odd_or_even)
+    return render_template('6-number_odd_or_even.html',
+                           number=n, odd_or_even=odd_or_even)
 
 
 # Run the Flask application on 0.0.0.0, port 5000
