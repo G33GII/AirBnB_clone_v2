@@ -12,3 +12,12 @@
         </UL>
     </BODY>
 </HTML>
+
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '1234';
+CREATE USER 'gaza'@'localhost' IDENTIFIED BY '1234';
+UPDATE mysql.user SET plugin='mysql_native_password' WHERE User='root';
+ALTER USER 'root'@'localhost' IDENTIFIED BY '1234';
+UPDATE user SET authentication_string=password('1234') WHERE user='root';
+FLUSH PRIVILEGES;

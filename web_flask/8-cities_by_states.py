@@ -3,6 +3,7 @@
 Main module for Flask web application.
 """
 
+
 # Importing necessary modules and classes
 from flask import Flask, render_template
 from models import *
